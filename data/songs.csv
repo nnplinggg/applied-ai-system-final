@@ -17,3 +17,15 @@ id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
 16,Island Sway,Rising Tide,reggae,uplifting,0.60,92,0.88,0.85,0.55
 17,Neon Pulse,Voltage Kid,edm,euphoric,0.96,128,0.90,0.93,0.03
 18,Porch Lullaby,Wren & Willow,folk,sad,0.30,70,0.28,0.38,0.93
+19,Paper Planes Home,Indigo Parade,indie pop,happy,0.70,118,0.83,0.77,0.40
+20,Basement Static,LoRoom,lofi,focused,0.45,84,0.55,0.61,0.70
+21,Thunder Alley,Voltline,rock,intense,0.88,148,0.52,0.64,0.12
+22,Candlelight Waltz,Elena Voss,classical,romantic,0.25,70,0.45,0.30,0.95
+23,Blue Hour Fade,Orbit Bloom,ambient,chill,0.20,58,0.60,0.35,0.94
+24,Smooth Operator Jr,Amara Skye,r&b,chill,0.48,86,0.65,0.74,0.45
+25,Highway Lullaby,Cody Hale,country,nostalgic,0.60,100,0.68,0.58,0.84
+26,Backyard Sessions,Wren & Willow,folk,relaxed,0.33,82,0.70,0.50,0.90
+27,Gridlock,Dre Valley,hip hop,aggressive,0.85,102,0.40,0.80,0.10
+28,Pixel Dawn,Voltage Kid,edm,happy,0.90,126,0.88,0.90,0.06
+29,Sunday Trio,Slow Stereo,jazz,chill,0.30,76,0.66,0.48,0.91
+30,Retro Skyline,Neon Echo,synthwave,uplifting,0.72,114,0.70,0.75,0.25

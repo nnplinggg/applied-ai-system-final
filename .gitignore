@@ -8,8 +8,6 @@ __pycache__/
 env/
 venv/
 
-# OS files
-.DS_Store
-
-# Pytest cache
+# Runtime logs (a sample lives in docs/)
+logs/
 .pytest_cache/

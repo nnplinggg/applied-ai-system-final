@@ -1,0 +1,62 @@
+$ python -m src.concierge "quiet music for studying and reading"
+Query: "quiet music for studying and reading"
+Status: ok   Confidence: 0.76
+Retrieved: study_focus
+Profile: genre=lofi, mood=focused, energy=0.4, likes_acoustic=True
+  agent> step=critique, iteration=1, top_ratio=1.0, issues=[]
+1. Focus Flow - LoRoom [lofi/focused] score 5.98
+     mood match (+2.0); energy 0.40 vs target 0.40 (+2.00); genre match (+1.0); acousticness 0.78 vs target 0.80 (+0.98); grounded in 'Study and focus sessions'
+2. Basement Static - LoRoom [lofi/focused] score 5.80
+     mood match (+2.0); energy 0.45 vs target 0.40 (+1.90); genre match (+1.0); acousticness 0.70 vs target 0.80 (+0.90); grounded in 'Study and focus sessions'
+3. Library Rain - Paper Lanterns [lofi/chill] score 3.84
+     energy 0.35 vs target 0.40 (+1.90); genre match (+1.0); acousticness 0.86 vs target 0.80 (+0.94); grounded in 'Study and focus sessions'
+4. Coffee Shop Stories - Slow Stereo [jazz/relaxed] score 2.85
+     energy 0.37 vs target 0.40 (+1.94); acousticness 0.89 vs target 0.80 (+0.91); grounded in 'Study and focus sessions'
+5. Backyard Sessions - Wren & Willow [folk/relaxed] score 2.76
+     energy 0.33 vs target 0.40 (+1.86); acousticness 0.90 vs target 0.80 (+0.90); grounded in 'Study and focus sessions'
+
+$ python -m src.concierge "workout music but I want metal"
+Query: "workout music but I want metal"
+Status: ok   Confidence: 0.81
+Retrieved: workout_intense, aggressive_heavy
+Profile: genre=metal, mood=aggressive, energy=0.97, likes_acoustic=False
+  agent> step=critique, iteration=1, top_ratio=0.97, issues=[]
+1. Iron Cathedral - Black Tide [metal/aggressive] score 5.84
+     mood match (+2.0); energy 0.97 vs target 0.97 (+2.00); genre match (+1.0); acousticness 0.04 vs target 0.20 (+0.84); grounded in 'Heavy and aggressive'
+2. Gridlock - Dre Valley [hip hop/aggressive] score 4.66
+     mood match (+2.0); energy 0.85 vs target 0.97 (+1.76); acousticness 0.10 vs target 0.20 (+0.90); grounded in 'Heavy and aggressive'
+3. Neon Pulse - Voltage Kid [edm/euphoric] score 2.81
+     energy 0.96 vs target 0.97 (+1.98); acousticness 0.03 vs target 0.20 (+0.83); grounded in 'Heavy and aggressive'
+4. Storm Runner - Voltline [rock/intense] score 2.78
+     energy 0.91 vs target 0.97 (+1.88); acousticness 0.10 vs target 0.20 (+0.90); grounded in 'Heavy and aggressive'
+5. Gym Hero - Max Pulse [pop/intense] score 2.77
+     energy 0.93 vs target 0.97 (+1.92); acousticness 0.05 vs target 0.20 (+0.85); grounded in 'Heavy and aggressive'
+
+$ python -m src.concierge "sad heartbreak songs but very high energy"
+Query: "sad heartbreak songs but very high energy"
+Status: low_confidence   Confidence: 0.79
+Retrieved: sad_melancholy
+Profile: genre=folk, mood=sad, energy=0.9, likes_acoustic=True
+  agent> step=critique, iteration=1, top_ratio=0.78, issues=['energy_mismatch']
+  agent> step=revise, action=stop, reason=no further fix
+1. Porch Lullaby - Wren & Willow [folk/sad] score 4.67
+     mood match (+2.0); energy 0.30 vs target 0.90 (+0.80); genre match (+1.0); acousticness 0.93 vs target 0.80 (+0.87); grounded in 'Sad and melancholy'
+2. Backyard Sessions - Wren & Willow [folk/relaxed] score 2.76
+     energy 0.33 vs target 0.90 (+0.86); genre match (+1.0); acousticness 0.90 vs target 0.80 (+0.90); grounded in 'Sad and melancholy'
+3. Dust Road Anthem - Cody Hale [country/nostalgic] score 2.55
+     energy 0.68 vs target 0.90 (+1.56); acousticness 0.81 vs target 0.80 (+0.99); grounded in 'Sad and melancholy'
+4. Highway Lullaby - Cody Hale [country/nostalgic] score 2.36
+     energy 0.60 vs target 0.90 (+1.40); acousticness 0.84 vs target 0.80 (+0.96); grounded in 'Sad and melancholy'
+5. Storm Runner - Voltline [rock/intense] score 2.28
+     energy 0.91 vs target 0.90 (+1.98); acousticness 0.10 vs target 0.80 (+0.30); grounded in 'Sad and melancholy'
+Note: I'm not confident in this match. Please confirm or refine your request (e.g. mood, genre, energy).
+
+$ python -m src.concierge "zxqv plmk wrtb"
+Query: "zxqv plmk wrtb"
+Status: needs_clarification   Confidence: 0.00
+Note: I couldn't match that to any music vibe I know. Try describing a mood, activity or genre.
+
+$ python -m src.concierge ""
+Query: ""
+Status: rejected   Confidence: 0.00
+Note: Input is empty. Describe the music you want.

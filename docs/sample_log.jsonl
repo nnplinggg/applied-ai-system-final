@@ -1,0 +1,58 @@
+{"ts": 1795021548.419, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021548.42, "event": "retrieve", "hits": [["study_focus", 0.291], ["sleep_ambient", 0.065], ["sad_melancholy", 0.039]]}
+{"ts": 1795021548.421, "event": "plan", "profile": {"genre": "lofi", "mood": "focused", "energy": 0.4, "likes_acoustic": true}, "overrides": {}, "grounded_in": "study_focus"}
+{"ts": 1795021548.421, "event": "critique", "iteration": 1, "top_ratio": 1.0, "issues": []}
+{"ts": 1795021548.421, "event": "decide", "status": "ok", "confidence": 0.76}
+{"ts": 1795021549.127, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021549.127, "event": "retrieve", "hits": [["workout_intense", 0.167], ["aggressive_heavy", 0.132], ["confident_hype", 0.0]]}
+{"ts": 1795021549.128, "event": "plan", "profile": {"genre": "metal", "mood": "aggressive", "energy": 0.97, "likes_acoustic": false}, "overrides": {"genre": "metal"}, "grounded_in": "aggressive_heavy"}
+{"ts": 1795021549.128, "event": "critique", "iteration": 1, "top_ratio": 0.97, "issues": []}
+{"ts": 1795021549.128, "event": "decide", "status": "ok", "confidence": 0.81}
+{"ts": 1795021549.836, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021549.837, "event": "retrieve", "hits": [["sad_melancholy", 0.265], ["happy_sunny", 0.075], ["workout_intense", 0.064]]}
+{"ts": 1795021549.837, "event": "plan", "profile": {"genre": "folk", "mood": "sad", "energy": 0.9, "likes_acoustic": true}, "overrides": {"mood": "sad", "energy": 0.9}, "grounded_in": "sad_melancholy"}
+{"ts": 1795021549.838, "event": "critique", "iteration": 1, "top_ratio": 0.78, "issues": ["energy_mismatch"]}
+{"ts": 1795021549.838, "event": "revise", "action": "stop", "reason": "no further fix"}
+{"ts": 1795021549.838, "event": "decide", "status": "low_confidence", "confidence": 0.79}
+{"ts": 1795021550.548, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021550.548, "event": "retrieve", "hits": [["aggressive_heavy", 0.0], ["confident_hype", 0.0], ["happy_sunny", 0.0]]}
+{"ts": 1795021550.548, "event": "plan", "action": "ask_user", "reason": "no relevant knowledge retrieved"}
+{"ts": 1795021551.278, "event": "validate", "ok": false, "reason": "Input is empty. Describe the music you want."}
+{"ts": 1795021567.735, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021567.735, "event": "retrieve", "hits": [["study_focus", 0.221], ["sleep_ambient", 0.083], ["sad_melancholy", 0.049]]}
+{"ts": 1795021567.736, "event": "plan", "profile": {"genre": "lofi", "mood": "focused", "energy": 0.4, "likes_acoustic": true}, "overrides": {}, "grounded_in": "study_focus"}
+{"ts": 1795021567.736, "event": "critique", "iteration": 1, "top_ratio": 1.0, "issues": []}
+{"ts": 1795021567.736, "event": "decide", "status": "ok", "confidence": 0.7}
+{"ts": 1795021567.736, "event": "validate", "ok": false, "reason": "Input is empty. Describe the music you want."}
+{"ts": 1795021567.737, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021567.737, "event": "retrieve", "hits": [["aggressive_heavy", 0.0], ["confident_hype", 0.0], ["happy_sunny", 0.0]]}
+{"ts": 1795021567.737, "event": "plan", "action": "ask_user", "reason": "no relevant knowledge retrieved"}
+{"ts": 1795021567.738, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021567.738, "event": "retrieve", "hits": [["workout_intense", 0.167], ["aggressive_heavy", 0.132], ["confident_hype", 0.0]]}
+{"ts": 1795021567.738, "event": "plan", "profile": {"genre": "metal", "mood": "aggressive", "energy": 0.97, "likes_acoustic": false}, "overrides": {"genre": "metal"}, "grounded_in": "aggressive_heavy"}
+{"ts": 1795021567.738, "event": "critique", "iteration": 1, "top_ratio": 0.97, "issues": []}
+{"ts": 1795021567.738, "event": "decide", "status": "ok", "confidence": 0.81}
+{"ts": 1795021567.739, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021567.739, "event": "retrieve", "hits": [["study_focus", 0.272], ["rainy_chill", 0.113], ["aggressive_heavy", 0.0]]}
+{"ts": 1795021567.739, "event": "plan", "profile": {"genre": "lofi", "mood": "chill", "energy": 0.35, "likes_acoustic": true}, "overrides": {"genre": "lofi", "mood": "chill"}, "grounded_in": "rainy_chill"}
+{"ts": 1795021567.739, "event": "critique", "iteration": 1, "top_ratio": 0.99, "issues": []}
+{"ts": 1795021567.739, "event": "decide", "status": "ok", "confidence": 0.74}
+{"ts": 1795021567.74, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021567.74, "event": "retrieve", "hits": [["sad_melancholy", 0.265], ["happy_sunny", 0.075], ["workout_intense", 0.064]]}
+{"ts": 1795021567.74, "event": "plan", "profile": {"genre": "folk", "mood": "sad", "energy": 0.9, "likes_acoustic": true}, "overrides": {"mood": "sad", "energy": 0.9}, "grounded_in": "sad_melancholy"}
+{"ts": 1795021567.74, "event": "critique", "iteration": 1, "top_ratio": 0.78, "issues": ["energy_mismatch"]}
+{"ts": 1795021567.74, "event": "revise", "action": "stop", "reason": "no further fix"}
+{"ts": 1795021567.74, "event": "decide", "status": "low_confidence", "confidence": 0.79}
+{"ts": 1795021567.741, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021567.741, "event": "retrieve", "hits": [["happy_sunny", 0.233], ["party_dance", 0.147], ["aggressive_heavy", 0.0]]}
+{"ts": 1795021567.741, "event": "plan", "profile": {"genre": "pop", "mood": "happy", "energy": 0.8, "likes_acoustic": false}, "overrides": {"mood": "happy"}, "grounded_in": "happy_sunny"}
+{"ts": 1795021567.741, "event": "critique", "iteration": 1, "top_ratio": 0.99, "issues": []}
+{"ts": 1795021567.741, "event": "decide", "status": "ok", "confidence": 0.87}
+{"ts": 1795021567.741, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021567.742, "event": "retrieve", "hits": [["workout_intense", 0.167], ["aggressive_heavy", 0.132], ["confident_hype", 0.0]]}
+{"ts": 1795021567.742, "event": "plan", "profile": {"genre": "metal", "mood": "aggressive", "energy": 0.97, "likes_acoustic": false}, "overrides": {"genre": "metal"}, "grounded_in": "aggressive_heavy"}
+{"ts": 1795021567.742, "event": "critique", "iteration": 1, "top_ratio": 0.97, "issues": []}
+{"ts": 1795021567.742, "event": "decide", "status": "ok", "confidence": 0.81}
+{"ts": 1795021567.742, "event": "validate", "ok": true, "reason": ""}
+{"ts": 1795021567.743, "event": "retrieve", "hits": [["aggressive_heavy", 0.0], ["confident_hype", 0.0], ["happy_sunny", 0.0]]}
+{"ts": 1795021567.743, "event": "plan", "action": "ask_user", "reason": "no relevant knowledge retrieved"}

@@ -1,43 +1,16 @@
 # AI Interactions Log
 
-> **Stretch features only.** Only fill in the sections that apply to stretch features you attempted. If you did not attempt a stretch feature, leave its section blank or delete it. This file is not required for the core project.
+Tool: Claude Code (agentic workflow), one session, plan-first.
 
----
+## Agentic workflow
+**Task given:** "Use my previous music recommender repo, plan and then carry out the Applied AI System assignment, and document it."
 
-## Agentic Workflow (SF8)
+**Process:** read the original repo, wrote a plan (RAG + agent loop + guardrails + eval), got approval, wrote failing tests first, implemented modules, ran an evaluation harness, fixed what it found, captured real outputs into the README.
 
-> Document your experience using an AI agent (e.g., Cursor Agent, Claude, Copilot) to make multi-step changes autonomously.
+**Files generated:** `src/{retriever,agent,guardrails,logger,concierge}.py`, `data/knowledge/*.md`, 12 extra songs, `tests/test_{retriever,guardrails,agent}.py`, `eval/run_eval.py`, `diagrams/architecture.mmd`, README, model card, presentation outline.
 
-**What task did you give the agent?**
-
-<!-- Describe the goal you asked the agent to accomplish -->
-
-**Prompts used:**
-
-<!-- Paste the key prompts you gave the agent -->
-
-**What did the agent generate or change?**
-
-<!-- List the files edited, code generated, or commands run -->
-
-**What did you verify or fix manually?**
-
-<!-- Describe anything the agent got wrong or that required human review -->
-
----
-
-## Design Pattern (SF10)
-
-> Document how AI helped you choose or implement a design pattern.
-
-**Which design pattern did you use?**
-
-<!-- e.g., Strategy, Factory, Observer, etc. -->
-
-**How did AI help you brainstorm or implement it?**
-
-<!-- Describe the conversation or suggestions that led to your decision -->
-
-**How does the pattern appear in your final code?**
-
-<!-- Point to the relevant class or method -->
+**What needed human or follow-up verification:**
+- First eval run failed 2 of 13 cases (metal override, the word "vibes"); both were real bugs in AI-written code, fixed in code rather than by loosening tests.
+- A critic gap let a contradictory request pass as `ok`; found by reading output, fixed with an energy-mismatch rule.
+- Grounding label cited the wrong document; found by reading sample output.
+- Not done by the AI: creating the new GitHub repo, pushing, the Loom video, and writing the personal reflection (needs the owner).

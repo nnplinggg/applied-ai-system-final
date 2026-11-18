@@ -1,0 +1,23 @@
+flowchart TD
+    U([User: free-text request]) --> G1{Input guardrail<br/>validate_query}
+    G1 -- empty / too long / non-text --> R1[/Rejected with reason/]
+    G1 -- ok --> RET[Retriever<br/>TF-IDF over data/knowledge]
+    KB[(Knowledge base<br/>14 vibe docs)] --> RET
+    RET -- best similarity below threshold --> H1[/Ask user to clarify<br/>human-in-the-loop/]
+    RET -- relevant docs --> PLAN[Planner<br/>docs + explicit keywords into profile<br/>genre, mood, energy, acoustic]
+    PLAN --> SCORE[Scorer<br/>recommend_songs<br/>from original project]
+    CAT[(songs.csv<br/>30 songs)] --> SCORE
+    SCORE --> DIV[Diversity cap<br/>max 2 songs per artist]
+    DIV --> CRIT{Critic<br/>top-score ratio,<br/>catalog gaps,<br/>energy mismatch}
+    CRIT -- issues, retries left --> REV[Revise<br/>relax missing genre/mood<br/>or try runner-up doc]
+    REV --> SCORE
+    CRIT -- passes or retries exhausted --> CONF[Confidence score<br/>match + margin + retrieval]
+    CONF -- high --> OUT[/Recommendations<br/>+ grounded explanations/]
+    CONF -- low or unresolved issue --> H2[/Recommendations + ask user<br/>to confirm or refine/]
+    PLAN -.-> LOG[(logs/agent.log<br/>JSON lines)]
+    CRIT -.-> LOG
+    CONF -.-> LOG
+    EVAL[eval/run_eval.py<br/>13 fixed cases + pytest] -.->|tests whole pipeline| U
+    OUT --> HUM([Human reviews result])
+    H2 --> HUM
+    H1 --> HUM
